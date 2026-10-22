@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<!-- Personal Portfolio Webpage | Web Programming Course (CSE-3120, Section-4) -->
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- [A05 Security Misconfiguration] Content-Security-Policy: no scripts, no external resources, no framing of forms elsewhere -->
+    <meta http-equiv="Content-Security-Policy" content="default-src 'none'; img-src 'self'; style-src 'self'; form-action 'self'; base-uri 'none'">
+    <!-- [A05/A01] Do not leak the page URL to external sites when links are followed -->
+    <meta name="referrer" content="no-referrer">
+    <meta name="description" content="Personal portfolio of Md. Imam Hossain, CSE student at the University of Liberal Arts Bangladesh.">
+    <title>Md. Imam Hossain | Personal Portfolio</title>
+
+    <!-- External stylesheet (lets the CSP drop 'unsafe-inline' for styles) -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <a class="skip-link" href="#main-content">Skip to main content</a>
+
+    <!-- ========== HEADER: Name and photograph ========== -->
+    <header>
+        <div>
+        <h1>Md. Imam Hossain</h1>
+        <p><em>Computer Science &amp; Engineering Student</em></p>
+        </div>
+
+        <!-- Profile photograph: meaningful alt text (WCAG 1.1.1) -->
+        <img class="profile-photo" src="images/profile.jpg" alt="Portrait photograph of Md. Imam Hossain" width="160" height="160">
+    </header>
+
+    <!-- ========== NAVIGATION: links to sections on this page ========== -->
+    <nav aria-label="Main navigation">
+        <ul>
+            <li><a href="#about">About</a></li>
+            <li><a href="#education">Education</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#interests">Interests</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <main id="main-content">
+
+        <!-- ========== SECTION: Short biography ========== -->
+        <section id="about">
+            <h2>About Me</h2>
+            <p>
+                Hello! I am a student of Computer Science and Engineering at
+                <strong>University Of Liberal Arts Bangladesh</strong>. I enjoy solving problems,
+                learning new technologies and building small projects.<br>
+                I am currently learning web development in the Web Programming
+                course (CSE-3120) and hope to become a software engineer.
+            </p>
+
+            <h3>Quick Facts</h3>
+            <!-- Unordered list -->
+            <ul>
+                <li>Location: Dhaka, Bangladesh</li>
+                <li>Languages: Bangla, English</li>
+                <li>Currently learning: HTML, CSS and JavaScript</li>
+            </ul>
+        </section>
+
+        <!-- ========== SECTION: Education (table) ========== -->
+        <section id="education">
+            <h2>Education</h2>
+
+            <div class="table-wrap" tabindex="0" role="region" aria-label="Education table, scrollable">
+            <table>
+                <caption>My academic background and achievements</caption>
+                <thead>
+                    <tr>
+                        <th>Level</th>
+                        <th>Institution</th>
+                        <th>Year</th>
+                        <th>Result / Achievement</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>B.Sc. in CSE</td>
+                        <td>University Liberal Arts Bangladesh</td>
+                        <td>2023 - Present</td>
+                        <td>Current CGPA: loading..</td>
+                    </tr>
+                    <tr>
+                        <td>HSC</td>
+                        <td>Al jameatul falahia kamil madrasah</td>
+                        <td>2022 - 2023</td>
+                        <td>GPA 4.30</td>
+                    </tr>
+                    <tr>
+                        <td>SSC</td>
+                        <td>Dagon Bhuiyan Azizia Senior (Alim / Fazil) Madrasah</td>
+                        <td>2020-2021</td>
+                        <td>GPA 4.00</td>
+                    </tr>
+                </tbody>
+            </table>
+            </div>
+        </section>
+
+        <!-- ========== SECTION: Skills (ordered list + subheadings) ========== -->
+        <section id="skills">
+            <h2>Skills</h2>
+
+            <h3>Top Skills (ranked by confidence)</h3>
+            <!-- Ordered list -->
+            <ol>
+                <li>HTML5</li>
+                <li>Problem solving</li>
+                <li>C / C++ programming</li>
+                <li>Python</li>
+            </ol>
+
+            <h3>Other Skills</h3>
+            <ul>
+                <li>Teamwork and communication</li>
+                <li>Microsoft Office</li>
+                <li>Git and GitHub (basic)</li>
+            </ul>
+        </section>
+
+        <!-- ========== SECTION: Hobbies and interests ========== -->
+        <section id="interests">
+            <h2>Hobbies &amp; Interests</h2>
+            <ul>
+                <li>Reading books</li>
+                <li>Playing cricket</li>
+                <li>
+                    Exploring technology
+                    <ul>
+                        <li>Web development</li>
+                        <li>Artificial intelligence</li>
+                    </ul>
+                </li>
+                <li>Photography</li>
+            </ul>
+        </section>
+
+        <!-- ========== SECTION: Contact information, form and links ========== -->
+        <section id="contact">
+            <h2>Contact Me</h2>
+
+            <h3>Contact Information</h3>
+            <p>
+                Email: imam.hossain.cse@ulab.edu.bd<br>
+                Phone: 01842352687<br>
+                Address: Dhaka, Bangladesh
+            </p>
+
+            <h3>Find Me Online</h3>
+            <!-- Hyperlinks (open in a new tab) -->
+            <ul>
+                <li><a href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer">My LinkedIn Profile<span class="visually-hidden"> (opens in a new tab)</span></a></li>
+                <li><a href="https://github.com/" target="_blank" rel="noopener noreferrer">My GitHub Profile<span class="visually-hidden"> (opens in a new tab)</span></a></li>
+                <li><a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer">My Facebook Page<span class="visually-hidden"> (opens in a new tab)</span></a></li>
+            </ul>
+
+            <h3>Send Me a Message</h3>
+            <!-- Contact form -->
+            <form action="#" method="post" autocomplete="on">
+                <label for="name">Your Name (required):</label>
+                <input type="text" id="name" name="name" placeholder="Enter your name" required maxlength="80" autocomplete="name" pattern="[^<>]*" title="Please do not use the characters &lt; or &gt;">
+
+                <label for="email">Your Email (required):</label>
+                <input type="email" id="email" name="email" placeholder="example@gmail.com" required maxlength="120" autocomplete="email">
+
+                <label for="subject">Subject:</label>
+                <select id="subject" name="subject">
+                    <option value="general">General question</option>
+                    <option value="project">Project collaboration</option>
+                    <option value="feedback">Feedback</option>
+                </select>
+
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" rows="5" maxlength="1000" placeholder="Write your message here"></textarea>
+
+                <div class="btn-row">
+                    <input type="submit" value="Send Message">
+                    <input type="reset" value="Clear Form">
+                </div>
+            </form>
+        </section>
+
+    </main>
+
+    <!-- ========== FOOTER ========== -->
+    <footer>
+        <p>
+            <small>&copy; 2026 Md.imam hossain | Web Programming Course (CSE-3120, Section-4)</small>
+        </p>
+    </footer>
+
+</body>
+
+</html>
